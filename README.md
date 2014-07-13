@@ -1,4 +1,4 @@
-Model
+model.js
 =====
 
 A lightweight node ORM for mysql
