@@ -6,7 +6,7 @@ A lightweight node ORM for mysql
 Running tests
 =============
 
-First, setup the test db by running the following command from inside the base directory:
+To setup the test db by run the following command from inside the base directory:
 `mysql -u root < test/schema.sql`.
 
 Then, run the test suite with:
