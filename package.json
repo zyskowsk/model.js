@@ -4,7 +4,7 @@
   "description": "A lightweight node orm for mysql",
   "main": "model.js",
   "scripts": {
-    "test": "make test"
+    "test": "test/script.sh"
   },
   "repository": {
     "type": "git",
