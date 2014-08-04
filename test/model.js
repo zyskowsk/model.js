@@ -62,4 +62,26 @@ if (process.env.TEST_ENV) {
             cleanse_db([test_model]);
         });
     });
+
+    describe('Model::all', function () {
+        it('should return a list of objects', function () {
+            var TestModel = Model.create('TestModel', {
+                name: 'varchar(255)',
+                blurb: 'varchar(255)',
+                age: 'int'
+            });
+            var test_model = new TestModel({
+                name: 'test name',
+                blurb: 'this is a test blurb',
+                age: 26
+            });
+            test_model.persist();
+
+            TestModel.all(function(objects) {
+                objects.length.should.equal(1);
+                objects[0].name.should.equal('test name');
+                cleanse_db([test_model]);
+            });
+        });
+    });
 }
